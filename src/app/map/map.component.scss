@@ -16,4 +16,14 @@
     height: 100%;
   }
   
+  #card-container{
+    border:solid 1px black;
+    width:200px;
+    height:98vh;
+  }
+  #card-list{
+    overflow-y: scroll;
+    width:200px;
+    height:98vh;
+  }
   
