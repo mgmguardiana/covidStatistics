@@ -35,11 +35,10 @@ export class MapComponent implements OnInit {
     this.countryService.getAllByCountries().subscribe(data=>{
       this.isLoading=false;
       this.countryStats=data;
-      GyverToastrComponent.displayModalWithType("LOADED",ModalType.SUCCESS);
+      GyverToastrComponent.displayModalWithType("Data were loaded",ModalType.SUCCESS);
       data.forEach(item=>{
-
         var marker=this.map.addCircle(item.countryInfo.lat,item.countryInfo.long,item.cases*10);
-        this.map.attachTooltip({ marker, msg: item.country + "<br/>Cases:" + item.cases + "<br/>Deaths:" + item.deaths + "<br/>Recovered:" + item.recovered });
+        this.map.attachTooltip( marker,item.country + "<br/>Cases:" + item.cases + "<br/>Deaths:" + item.deaths + "<br/>Recovered:" + item.recovered);
         item.tag=marker;
       })
     },(error:HttpErrorResponse)=>{
