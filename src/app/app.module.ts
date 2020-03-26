@@ -8,11 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { StatsService } from './service/stats.service';
 import { CardComponent } from './card/card.component';
 import { FormsModule } from '@angular/forms';
+import { GyverToastrComponent } from './gyver-toastr/gyver-toastr.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    CardComponent
+    CardComponent,
+    GyverToastrComponent
   ],
   imports: [
     BrowserModule,

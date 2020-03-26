@@ -1,10 +1,16 @@
 <div id="card-container">
-  <input type=text placeholder="Search country details"  [(ngModel)]="searchData"/>
-  <div id="card-list">
-    <div *ngFor="let countryStat of countryStats">
-      <card  [stats]="countryStat" *ngIf="isSearchSatisfy(countryStat)" (click)="focusToMap(countryStat)"></card>
-
+  <div *ngIf="!isLoading">
+    <div id="search">
+      <input type=text placeholder="Search country details" style="width:100%" [(ngModel)]="searchData"/>
     </div>
+    <div id="card-list">
+      <div *ngFor="let countryStat of countryStats">
+        <card  [stats]="countryStat" *ngIf="isSearchSatisfy(countryStat)" (click)="focusToMap(countryStat)"></card>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isLoading">
+    Loading
   </div>
 </div>
 
@@ -14,3 +20,4 @@
       <div id="map"></div>
     </div>
 </div>
+<toastr></toastr>

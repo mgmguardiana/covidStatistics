@@ -1,3 +1,13 @@
 <div id="card-container">
-    Country:{{stats.country}} <br/>
+    
+    <div class="block">
+        <div class="left">
+            <img [src]="stats.countryInfo.flag" height="10px" />
+            {{stats.country}}
+        </div>
+
+        <div class="right">
+            {{stats.cases}}
+        </div>
+    </div>
 </div>

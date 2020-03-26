@@ -19,4 +19,6 @@
         critical: number;
         casesPerOneMillion: number;
         deathsPerOneMillion: number;
+
+        tag:any;
     }

@@ -7,7 +7,7 @@ import { Routes, Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'nCovStats';
+  title = 'Covid-19 statistics around the world';
   constructor(public _route:Router){}
   ngOnInit()
   {
