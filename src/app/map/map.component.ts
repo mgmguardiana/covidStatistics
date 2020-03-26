@@ -6,6 +6,7 @@ import { Map } from '../helper/map';
 import { LeafletAngular } from '../helper/leafletAngular';
 import { HttpErrorResponse } from '@angular/common/http';
 import { GyverToastrComponent, ModalType } from '../gyver-toastr/gyver-toastr.component';
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -17,9 +18,10 @@ export class MapComponent implements OnInit {
   countryStats:CountryStats[];
   activeFocus:CountryStats;
   isLoading:boolean;
-  constructor(public countryService:StatsService) { }
+  constructor(public countryService:StatsService,public title:Title) { }
 
   ngOnInit() {
+    this.title.setTitle("Worldwide Statistics for Covid-19");
     this.map=LeafletAngular.initializeMap("map",14.599512, 120.984222);
     this.loadCountriesStats();
   }
