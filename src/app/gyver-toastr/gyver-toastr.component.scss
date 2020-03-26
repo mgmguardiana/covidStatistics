@@ -1,0 +1,52 @@
+.toastr-container{
+
+    max-width: 400px;
+    max-height: 100px;
+    min-width: 200px;
+    min-height:20px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding:10px;
+    box-shadow: 2px 2px 3px black;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    font-size: small;
+}
+
+.red-toastr{
+    background-color: #B62C34 !important;
+    color:white;
+    text-shadow: 2px 2px 2px black;
+    border: none;
+}
+
+.white-toastr{
+    background-color: white !important;
+    color:black;
+    text-shadow: 2px 2px 2px black;
+    border: none;
+}
+
+.green-toastr{
+    background-color: #27ae60 !important;
+    color:white;
+    text-shadow: 2px 2px 2px black;
+    border: none;
+}
+
+.blue-toastr{
+    background-color:#2980b9 !important;
+    color:white;
+    text-shadow: 2px 2px 2px black;
+    border: none;
+}
+
+.yellow-toastr{
+    background-color:#f1c40f !important;
+    color:black;
+    text-shadow: 2px 2px 2px black;
+    border: none;
+}
